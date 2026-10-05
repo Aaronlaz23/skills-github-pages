@@ -240,7 +240,7 @@
     <footer>
 
         <p>
-            © 2026 — Electronics Engineer & Software Developer
+            
         </p>
 
     </footer>
