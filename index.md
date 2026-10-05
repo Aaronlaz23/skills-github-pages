@@ -177,7 +177,7 @@
                     </p>
 
                     <span class="project-tags">
-                        C++ · Electronics · Robotics
+                        Python · Pytorch · C++ · Power Electronics
                     </span>
 
                     <img src="images/RobotHolder.png" alt="Self-Driving Prototype" width="200">
