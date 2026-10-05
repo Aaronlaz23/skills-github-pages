@@ -62,7 +62,7 @@ nav {
     width: min(1100px, 90%);
     margin: auto;
 
-    height: 70px;
+    height: 80px;
 
     display: flex;
     align-items: center;
@@ -100,9 +100,6 @@ nav {
 
     display: flex;
     align-items: center;
-
-    padding-top: 70px;
-    padding-bottom: 70px;
 
     background:
         radial-gradient(
