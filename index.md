@@ -30,7 +30,7 @@
 
         <div class="hero-content">
 
-            <p class="intro">Hello, I'm</p>
+            <p class="intro">Hello, I'm Aaron Martinez</p>
 
             <h1>Electronics Engineer</h1>
 
