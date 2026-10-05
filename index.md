@@ -30,15 +30,17 @@
 
         <div class="hero-content">
 
-            <p class="intro">Hello, I'm Aaron Martinez</p>
+            <p class="intro">I'm Aaron Martinez</p>
+
+            <img src="images/PlaceHolder.png" alt="A description of the photo" width="400">
 
             <h1>Electronics Engineer</h1>
 
-            <h2>Software Developer</h2>
+            <h2>& Software Developer</h2>
 
             <p class="description">
                 Solving problems is my passion,
-                learning by doing is my motto.
+                "Learning by doing" is my motto.
             </p>
 
             <a href="#projects" class="button">
