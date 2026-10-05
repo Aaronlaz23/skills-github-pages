@@ -1,5 +1,5 @@
 ---
-title: Welcome to my blog!
+title: Aaron Martinez
 
-text: Hi there
+date: 10/05/26
 ---
