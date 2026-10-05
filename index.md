@@ -32,7 +32,7 @@
 
             <p class="intro">I'm Aaron Martinez</p>
 
-            <img src="images/PlaceHolder.png" alt="A description of the photo" width="400">
+            <img src="images/PlaceHolder.png" alt="This is my picture" width="400">
 
             <h1>Electronics Engineer</h1>
 
@@ -179,6 +179,8 @@
                     <span class="project-tags">
                         C++ · Electronics · Robotics
                     </span>
+
+                    <img src="images/RobotHolder.png" alt="Self-Driving Prototype" width="200">
                 </article>
 
 
@@ -195,6 +197,8 @@
                     <span class="project-tags">
                         PID · Control Systems · Electronics
                     </span>
+
+                    <img src="images/RobotHolder.png" alt="Self-Driving Prototype" width="200">
                 </article>
 
 
@@ -211,6 +215,8 @@
                     <span class="project-tags">
                         Python · Machine Vision · Robotics
                     </span>
+
+                    <img src="images/RobotHolder.png" alt="Self-Driving Prototype" width="200">
                 </article>
 
 
@@ -227,6 +233,8 @@
                     <span class="project-tags">
                         C# · Game Design · Programming
                     </span>
+
+                    <img src="images/RobotHolder.png" alt="Self-Driving Prototype" width="200">
                 </article>
 
             </div>
