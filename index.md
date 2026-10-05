@@ -131,20 +131,26 @@
             <h2>Continuous learning.</h2>
 
             <div class="certifications-list">
-
+                
                 <div class="certification">
                     <span>01</span>
-                    <h3>Artificial Intelligence</h3>
+                    <h3>Electronics</h3>
                     <p>Harvard</p>
                 </div>
 
                 <div class="certification">
                     <span>02</span>
-                    <h3>Game Design</h3>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Harvard</p>
                 </div>
 
                 <div class="certification">
                     <span>03</span>
+                    <h3>Game Design</h3>
+                </div>
+
+                <div class="certification">
+                    <span>04</span>
                     <h3>CAD Certification</h3>
                 </div>
 
