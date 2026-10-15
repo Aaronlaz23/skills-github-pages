@@ -253,6 +253,7 @@ section h2 {
 
 .dark-section-underlay:has(.skill-card-programming:hover)::before {
     --bg-image: url('images/CS50.png');
+    background-size: cover;
     opacity: 0.5;
 }
 
@@ -317,7 +318,30 @@ section h2 {
 
 .skill-card:hover {
     transform: translateY(-5px);
-    background-size: cover;
+
+    border-color: #777;
+}
+
+.skill-card-design:hover {
+    transform: translateY(-5px);
+
+    border-color: #777;
+}
+
+.skill-card-languages:hover {
+    transform: translateY(-5px);
+
+    border-color: #777;
+}
+
+.skill-card-programming:hover {
+    transform: translateY(-5px);
+
+    border-color: #777;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
 
     border-color: #777;
 }
