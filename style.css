@@ -424,10 +424,235 @@ section h2 {
     transition: transform 0.2s, border-color 0.2s;
 }
 
-.project-card:hover {
+.project-card-1 {
+    padding: 40px;
+
+    border: 1px solid #333;
+
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.project-card-1::before{
+    content: "";
+    position: absolute;
+    background:url("images/F1_Chasis.jpeg") no-repeat center / cover;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+}
+
+.project-card-1:hover {
     transform: translateY(-5px);
 
     border-color: #777;
+}
+
+.project-card-1:hover::before {
+    opacity: 1;
+}
+
+.project-card-2 {
+    padding: 40px;
+
+    border: 1px solid #333;
+
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.project-card-2::before{
+    content: "";
+    position: absolute;
+    background:url("images/Wheel_Inside_1.jpeg") no-repeat center / cover;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+}
+
+.project-card-2:hover {
+    transform: translateY(-5px);
+
+    border-color: #777;
+}
+
+.project-card-2:hover::before {
+    opacity: 1;
+}
+
+.project-card-3 {
+    padding: 40px;
+
+    border: 1px solid #333;
+
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.project-card-3::before{
+    content: "";
+    position: absolute;
+    background:url("images/Levitator_1.png") no-repeat center / cover;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+}
+
+.project-card-3:hover {
+    transform: translateY(-5px);
+
+    border-color: #777;
+}
+
+.project-card-3:hover::before {
+    opacity: 1;
+}
+
+.project-card-4 {
+    padding: 40px;
+
+    border: 1px solid #333;
+
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.project-card-4::before{
+    content: "";
+    position: absolute;
+    background:url("images/Levitator_1.png") no-repeat center / cover;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+}
+
+.project-card-4:hover {
+    transform: translateY(-5px);
+
+    border-color: #777;
+}
+
+.project-card-4:hover::before {
+    opacity: 1;
+}
+
+.project-card-5 {
+    padding: 40px;
+
+    border: 1px solid #333;
+
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.project-card-5::before{
+    content: "";
+    position: absolute;
+    background:url("images/Game.png") no-repeat center / cover;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+}
+
+.project-card-5:hover {
+    transform: translateY(-5px);
+
+    border-color: #777;
+}
+
+.project-card-5:hover::before {
+    opacity: 1;
+}
+
+.project-card-6 {
+    padding: 40px;
+
+    border: 1px solid #333;
+
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.project-card-6::before{
+    content: "";
+    position: absolute;
+    background:url("images/PSU_Front.jpg") no-repeat center / cover;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+}
+
+.project-card-6:hover {
+    transform: translateY(-5px);
+
+    border-color: #777;
+}
+
+.project-card-6:hover::before {
+    opacity: 1;
+}
+
+.project-card-7 {
+    padding: 40px;
+
+    border: 1px solid #333;
+
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.project-card-7::before{
+    content: "";
+    position: absolute;
+    background:url("images/Oscilloscope_Front.jpg") no-repeat center / cover;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+}
+
+.project-card-7:hover {
+    transform: translateY(-5px);
+
+    border-color: #777;
+}
+
+.project-card-7:hover::before {
+    opacity: 1;
 }
 
 .project-number {
