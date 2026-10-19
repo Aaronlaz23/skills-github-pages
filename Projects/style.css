@@ -1,20 +1,84 @@
+/* ---------- Tokens ---------- */
+:root {
+	--panel-rgb: 255 , 255, 255;
+	--panel-bg: rgba(var(--panel-rgb), 0.8);
+	--media-width: 30%;
+	--gap: 30px;
+}
+
+/* ---------- Page ---------- */
+* { box-sizing: border-box; }
+
+body {
+	margin: 0;
+	background-color: #52eeff87; /* fallback while the image loads */
+	/* background: url("project_images/bg.jpg") center / cover no-repeat fixed; */
+	font-family: system-ui, sans-serif;
+	color: black;
+	line-height: 1.5;
+}
+
+/* ---------- 1. Hero ---------- */
+.top-description {
+	text-align: center;
+	padding: 40px 40px 60px;
+	background: linear-gradient(
+		to bottom,
+		rgba(var(--panel-rgb), 0.8) 0%,
+		rgba(var(--panel-rgb), 0.8) 50%,
+		rgba(var(--panel-rgb), 0) 100%
+	);
+}
+
+.top-description p {
+	max-width: 70ch;
+	margin: 0 auto;
+}
+
+/* ---------- 2. List ---------- */
+.project-list {
+	padding: 0 var(--gap);
+}
+
 .list-item {
-	position: relative;
-	margin-bottom: 12px;
+	display: flex;
+	margin-bottom: var(--gap);
 	border: 1px solid #ddd;
 }
 
-.list-item img {
+/* manual override: add class="reverse" to force a flip, or "normal" to cancel the auto flip */
+.list-item:nth-child(even),
+.list-item.reverse {
+	flex-direction: row-reverse;
+}
+.list-item.normal {
+	flex-direction: row;
+}
+
+/* image + overlay live together, so the overlay always sits on the image */
+.media {
+	position: relative;
+	width: var(--media-width);
+	flex-shrink: 0;
+}
+
+.media img {
 	display: block;
-	width: 30%;
-	height: auto;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.media:hover img {
+	transform: scale(1.05);
+	transition: transform 0.3s ease;
 }
 
 .overlay {
 	position: absolute;
-	transform: translate(1%, 1%);
 	top: 1%;
 	left: 1%;
+	right: 1%;
 	text-align: center;
 	color: white;
 	text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
@@ -25,14 +89,72 @@
 	margin: 0;
 }
 
-.side-description {
-	position: absolute;
-	top: 0;
-	left: 30%;
-	width: 70%;
-	padding: 10px;
-	background-color: rgba(255, 255, 255, 0.8);
-	color: #333;
-	font-size: 16px;
-	line-height: 1.5;
+.overlay p {
+	margin: 0;
+}
+
+/* text side: stack as many .panel blocks as you like */
+.content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.panel {
+	flex: 1;
+	padding: 10px 16px;
+	background-color: var(--panel-bg);
+}
+
+.panel + .panel {
+	border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.panel h2 {
+	margin: 0 0 6px;
+	font-size: 20px;
+}
+
+.panel p,
+.panel ol,
+.panel ul {
+	margin: 0 0 8px;
+}
+
+/* ---------- 3. Gallery ---------- */
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	gap: 8px;
+	padding: var(--gap);
+}
+
+.gallery img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+}
+
+/* ---------- 4. Closing text ---------- */
+.closing {
+	max-width: 70ch;
+	margin: var(--gap) auto;
+	padding: 24px 32px;
+	background-color: var(--panel-bg);
+}
+
+.closing h2 { margin-top: 0; }
+
+/* ---------- Mobile: stack image on top of text ---------- */
+@media (max-width: 700px) {
+	.list-item,
+	.list-item:nth-child(even),
+	.list-item.reverse {
+		flex-direction: column;
+	}
+
+	.media {
+		width: 100%;
+	}
 }

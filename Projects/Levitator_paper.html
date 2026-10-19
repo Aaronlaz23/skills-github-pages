@@ -3,43 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Magnetic Levitation Control</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="list-item">
-        <img src="project_images/Levitator_1.png" alt="Levitator Image">
-        <div class="overlay">
-            <h1>Levitator Paper</h1>
-            <p>Here is the paper for the Levitator project.</p>
-            <a href="Papers/MAGLEV_VER_3.pdf" download>Download Paper</a>
-        </div>
-        <div class="side-description">
-            <p>This is a brief description of the Levitator paper.</p>
-        </div>
-    </div>
-    <div class="list-item">
-        <img src="project_images/Levitator_1.png" alt="Levitator Image">
-        <div class="overlay">
-            <h1>Levitator Paper</h1>
-            <p>Here is the paper for the Levitator project.</p>
-            <a href="Papers/MAGLEV_VER_3.pdf" download>Download Paper</a>
-        </div>
-        <div class="side-description">
-            <p>This is a brief description of the Levitator paper.</p>
-        </div>
-    </div>
-    <div class="list-item">
-        <img src="project_images/Levitator_1.png" alt="Levitator Image">
-        <div class="overlay">
-            <h1>Levitator Paper</h1>
-            <p>Here is the paper for the Levitator project.</p>
-            <a href="Papers/MAGLEV_VER_3.pdf" download>Download Paper</a>
-        </div>
-        <div class="side-description">
-            <p>This is a brief description of the Levitator paper.</p>
-        </div>
-    </div>
+
+    <!-- 1. HERO / INTRO -->
+    <header class="top-description">
+        <h1>What is this Project?</h1>
+        <p>
+            The brief description is simply a design of the PID control system of the physical phenomenon called magnetic levitation.
+            Put simply, it makes a mass float in a stable position in mid air using an electromagnet.
+        </p>
+    </header>
+
+    <!-- 2. ALTERNATING LIST (odd = image left, even = image right, automatic) -->
+    <main class="project-list">
+
+        <article class="list-item">
+            <div class="media">
+                <img src="project_images/Levitator_1.png" alt="Levitator Image">
+                <div class="overlay">
+                    <h1>Magnetic Levitation Control</h1>
+                    <p>This is the final result</p>
+                </div>
+            </div>
+            <div class="content">
+                <section class="panel">
+                    <h2>Objective</h2>
+                    <p>Control the position of the levitating object.</p>
+                </section>
+                <section class="panel">
+                    <h2>Workflow</h2>
+                    <ol>
+                        <li>Decide what the objective is. This is the first and most important step.</li>
+                        <li>Find out which materials are available and needed.</li>
+                        <li>Understand the physical system.</li>
+                        <li>Reverse engineer the physics and the sensors.</li>
+                        <li>Design the control system.</li>
+                        <li>Implement the control system in a mechanical setup.</li>
+                    </ol>
+                </section>
+            </div>
+        </article>
+
+        <article class="list-item">
+            <div class="media">
+                <img src="project_images/Levitator_1.png" alt="Flow diagram">
+                <div class="overlay"><h1>Flow diagram</h1></div>
+            </div>
+            <div class="content">
+                <section class="panel">
+                    <h2>Flow diagram</h2>
+                    <p>Add description here.</p>
+                </section>
+            </div>
+        </article>
+
+        <article class="list-item">
+            <div class="media">
+                <img src="project_images/Levitator_1.png" alt="Levitator Image">
+                <div class="overlay"><h1>Objective</h1></div>
+            </div>
+            <div class="content">
+                <section class="panel">
+                    <h2>Objective</h2>
+                    <p>Add description here.</p>
+                </section>
+            </div>
+        </article>
+
+        <article class="list-item">
+            <div class="media">
+                <img src="project_images/Levitator_1.png" alt="Levitator structure">
+                <div class="overlay"><h1>Structure</h1></div>
+            </div>
+            <div class="content">
+                <section class="panel">
+                    <h2>Materials</h2>
+                    <ul>
+                        <li>ATMEGA328P Microcontroller (handmade board)</li>
+                        <li>Electromagnet (handmade)</li>
+                        <li>Position sensor (reverse engineered)</li>
+                        <li>Power supply</li>
+                        <li>Mechanical structure</li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+
+        <article class="list-item">
+            <div class="media">
+                <img src="project_images/Levitator_1.png" alt="Physical system">
+                <div class="overlay"><h1>Physical System</h1></div>
+            </div>
+            <div class="content">
+                <section class="panel">
+                    <h2>Physical Concepts</h2>
+                    <p>This is the mathematical model of the physical system.</p>
+                    <p>The system is unstable, so we need to design a control system to stabilize it.</p>
+                    <p>We can treat it as a black box and obtain the transfer function, or tune the PID manually.</p>
+                    <p>In this case we'll fit the curves and use that knowledge to tune the PID by hand.</p>
+                </section>
+            </div>
+        </article>
+
+        <article class="list-item">
+            <div class="media">
+                <img src="project_images/Levitator_1.png" alt="Sensor curve">
+                <div class="overlay"><h1>Sensor Curve</h1></div>
+            </div>
+            <div class="content">
+                <section class="panel">
+                    <h2>Reverse Engineering The Sensor Response</h2>
+                    <p>The sensor response is not well defined, so we need to reverse engineer it.</p>
+                    <p>We measure the sensor response to a known input and fit a curve to the data.</p>
+                    <p>That curve gives us the function that maps distance to voltage.</p>
+                </section>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- 3. GALLERY (add as many images as you want) -->
+    <section class="gallery">
+        <img src="project_images/Levitator_1.png" alt="">
+        <img src="project_images/Levitator_1.png" alt="">
+        <img src="project_images/Levitator_1.png" alt="">
+        <img src="project_images/Levitator_1.png" alt="">
+        <img src="project_images/Levitator_1.png" alt="">
+        <img src="project_images/Levitator_1.png" alt="">
+    </section>
+
+    <!-- 4. CLOSING NARRATIVE -->
+    <section class="closing">
+        <h2>Lessons learned</h2>
+        <p>Write the longer personal story or conclusion here.</p>
+    </section>
+
 </body>
 </html>
