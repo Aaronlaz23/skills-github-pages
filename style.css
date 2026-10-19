@@ -655,6 +655,7 @@ section h2 {
     opacity: 1;
 }
 
+
 .project-number {
     color: #777;
 
@@ -677,8 +678,9 @@ section h2 {
     margin-top: auto;
 
     font-size: 0.85rem;
+    text-shadow: 0 2px 6px white;
 
-    color: #777;
+    color: white;
 }
 
 
