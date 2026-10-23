@@ -24,6 +24,13 @@ body {
     margin: auto;
 }
 
+.container h3:hover{
+    font-size: 150%;
+    transition: all ease-in-out;
+    color:#999;
+    text-shadow: #ffffff;
+}
+
 .container-underlay {
     width: min(1100px, 90%);
     margin: auto;

@@ -12,7 +12,7 @@
     <header class="top-description">
         <h1>What is this Project?</h1>
         <p>
-            The brief description is simply a design of the PID control system of the physical phenomenon called magnetic levitation.
+            The technical explanation is the design of the PID control system of the physical phenomenon called magnetic levitation.
             Put simply, it makes a mass float in a stable position in mid air using an electromagnet.
         </p>
     </header>
@@ -30,10 +30,6 @@
             </div>
             <div class="content">
                 <section class="panel">
-                    <h2>Objective</h2>
-                    <p>Control the position of the levitating object.</p>
-                </section>
-                <section class="panel">
                     <h2>Workflow</h2>
                     <ol>
                         <li>Decide what the objective is. This is the first and most important step.</li>
@@ -44,38 +40,17 @@
                         <li>Implement the control system in a mechanical setup.</li>
                     </ol>
                 </section>
-            </div>
-        </article>
-
-        <article class="list-item">
-            <div class="media">
-                <img src="project_images/Levitator_1.png" alt="Flow diagram">
-                <div class="overlay"><h1>Flow diagram</h1></div>
-            </div>
-            <div class="content">
-                <section class="panel">
-                    <h2>Flow diagram</h2>
-                    <p>Add description here.</p>
-                </section>
-            </div>
-        </article>
-
-        <article class="list-item">
-            <div class="media">
-                <img src="project_images/Levitator_1.png" alt="Levitator Image">
-                <div class="overlay"><h1>Objective</h1></div>
-            </div>
-            <div class="content">
                 <section class="panel">
                     <h2>Objective</h2>
-                    <p>Add description here.</p>
+                    <p>Control the position of the levitating object.</p>
                 </section>
             </div>
         </article>
 
+
         <article class="list-item">
             <div class="media">
-                <img src="project_images/Levitator_1.png" alt="Levitator structure">
+                <img src="project_images/Diagram_Maglev.png" alt="Levitator structure">
                 <div class="overlay"><h1>Structure</h1></div>
             </div>
             <div class="content">
@@ -94,7 +69,7 @@
 
         <article class="list-item">
             <div class="media">
-                <img src="project_images/Levitator_1.png" alt="Physical system">
+                <img src="project_images/Levitation_Formula.png" alt="Physical system">
                 <div class="overlay"><h1>Physical System</h1></div>
             </div>
             <div class="content">
@@ -110,15 +85,20 @@
 
         <article class="list-item">
             <div class="media">
-                <img src="project_images/Levitator_1.png" alt="Sensor curve">
+                <img src="project_images/Black_Box_Solution.png" alt="Sensor curve">
                 <div class="overlay"><h1>Sensor Curve</h1></div>
             </div>
             <div class="content">
                 <section class="panel">
-                    <h2>Reverse Engineering The Sensor Response</h2>
+                    <h2>Reverse Engineering The Sensor's Response</h2>
                     <p>The sensor response is not well defined, so we need to reverse engineer it.</p>
                     <p>We measure the sensor response to a known input and fit a curve to the data.</p>
                     <p>That curve gives us the function that maps distance to voltage.</p>
+                </section>
+                <section class="panel">
+                    <h2>Once the Response is Known</h2>
+                    <p>We get clues on how the system behaves under different conditions and speeds.</p>
+                    <p>Meaning we can manually tune the PID controller based on this knowledge.</p>
                 </section>
             </div>
         </article>
@@ -137,8 +117,21 @@
 
     <!-- 4. CLOSING NARRATIVE -->
     <section class="closing">
-        <h2>Lessons learned</h2>
-        <p>Write the longer personal story or conclusion here.</p>
+        <img src="project_images/Levitator_1.png" alt="The finished maglev device">
+
+        <div class="closing-text">
+            <h2>Lessons learned</h2>
+            <p>
+                While building this levitator I learned a lot about PID control and the real
+                application of control systems, especially how to control electromagnets. I also
+                learned how important reverse engineering is for understanding a system.
+            </p>
+            <p>
+                Even with challenges like the system being nonlinear, my straightforward approach
+                worked, and I was able to implement the software on the hardware.
+            </p>
+            <a class="download-button" href="Papers/MAGLEV_VER_3.pdf">Download full paper</a>
+        </div>
     </section>
 
 </body>

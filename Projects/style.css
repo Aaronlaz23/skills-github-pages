@@ -1,6 +1,6 @@
 /* ---------- Tokens ---------- */
 :root {
-	--panel-rgb: 255 , 255, 255;
+	--panel-rgb: 0, 0, 0;
 	--panel-bg: rgba(var(--panel-rgb), 0.8);
 	--media-width: 30%;
 	--gap: 30px;
@@ -11,12 +11,13 @@
 
 body {
 	margin: 0;
-	background-color: #52eeff87; /* fallback while the image loads */
+	background-color: #ffffff; /* fallback while the image loads */
 	/* background: url("project_images/bg.jpg") center / cover no-repeat fixed; */
 	font-family: system-ui, sans-serif;
 	color: black;
 	line-height: 1.5;
 }
+
 
 /* ---------- 1. Hero ---------- */
 .top-description {
@@ -35,21 +36,51 @@ body {
 	margin: 0 auto;
 }
 
+.top-description h1 {
+	margin: 0 0 16px;
+	font-size: 36px;
+	color: white;
+}
+
+.top-description p {
+	font-size: 24px;
+	color: white;
+	text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
 /* ---------- 2. List ---------- */
 .project-list {
 	padding: 0 var(--gap);
 }
 
+@keyframes reveal {
+	from {
+		opacity: 0;
+		translate: 40px 40px;
+	}
+	to {
+		opacity: 1;
+		translate: 0 0;
+	}
+}
+
 .list-item {
 	display: flex;
 	margin-bottom: var(--gap);
-	border: 1px solid #ddd;
+	border: 1px solid #999999;
+	transition: transform 1s ease;	
+	
+	animation: reveal linear both;
+	animation-timeline: view();
+	animation-range: entry 0% entry 40%; 
 }
 
 /* manual override: add class="reverse" to force a flip, or "normal" to cancel the auto flip */
 .list-item:nth-child(even),
 .list-item.reverse {
 	flex-direction: row-reverse;
+	background-color: rgba(25, 25, 25, 0.808);
+	color: white;
 }
 .list-item.normal {
 	flex-direction: row;
@@ -60,6 +91,7 @@ body {
 	position: relative;
 	width: var(--media-width);
 	flex-shrink: 0;
+	
 }
 
 .media img {
@@ -103,7 +135,9 @@ body {
 .panel {
 	flex: 1;
 	padding: 10px 16px;
-	background-color: var(--panel-bg);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .panel + .panel {
@@ -111,6 +145,7 @@ body {
 }
 
 .panel h2 {
+	text-align: center;
 	margin: 0 0 6px;
 	font-size: 20px;
 }
@@ -119,6 +154,7 @@ body {
 .panel ol,
 .panel ul {
 	margin: 0 0 8px;
+	text-align: justify;
 }
 
 /* ---------- 3. Gallery ---------- */
@@ -138,16 +174,58 @@ body {
 
 /* ---------- 4. Closing text ---------- */
 .closing {
-	max-width: 70ch;
+	display: flex;
+	max-width: 1000px;
 	margin: var(--gap) auto;
-	padding: 24px 32px;
 	background-color: var(--panel-bg);
+	border: 1px solid #999999;
+	overflow: hidden;
 }
 
-.closing h2 { margin-top: 0; }
+.closing img {
+	display: block;
+	width: 35%;
+	object-fit: cover;
+	align-self: stretch;     /* image matches the text's height */
+}
+
+.closing-text {
+	flex: 1;
+	padding: 24px 32px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* vertically centered, like your panels */
+}
+
+.closing h2 { margin-top: 0; color: white; }
+.closing p  { color: white; }
+
+.download-button {
+	display: block;
+	margin-top: 12px;
+	padding: 10px 20px;
+	background-color: #f6f7f8;
+	color: #111;             /* dark text on the light button */
+	text-align: center;
+	text-decoration: none;
+	border-radius: 4px;
+	transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+	background-color: #47f4f4;
+}
+
+/* image on the right: add class="closing reverse" */
+.closing.reverse { flex-direction: row-reverse; }
 
 /* ---------- Mobile: stack image on top of text ---------- */
 @media (max-width: 700px) {
+
+	.closing,
+	.closing.reverse { flex-direction: column; }
+	.closing img { width: 100%; height: 220px; }
+
 	.list-item,
 	.list-item:nth-child(even),
 	.list-item.reverse {
