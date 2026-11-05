@@ -12,7 +12,10 @@
     <header class="top-description">
         <h1>What is this Project?</h1>
         <p>
-            ---------------------
+            This is the most ambitious project I have ever done, it is a self-driving F1 RC car that uses computer vision and machine learning to navigate a track autonomously. 
+            The project involves designing and building the car, implementing the control algorithms, 
+            and training the machine learning model to recognize the track and make driving decisions.
+            Built from sctatch, starting from the motors, the control, the steering and the comunication system, and even the chasis and ML-agent
         </p>
     </header>
 
@@ -21,23 +24,26 @@
 
         <article class="list-item">
             <div class="media">
-                <img src="project_images/Levitator_1.png" alt="Levitator Image">
+                <img src="project_images/F1_Control_2.jpeg" alt="Levitator Image">
                 <div class="overlay">
-                    <h1>Magnetic Levitation Control</h1>
-                    <p>This is the final result</p>
+                    <h1>Communication and AI</h1>
+                    <p>This requires Raspberri, ESP32 and Arduino</p>
                 </div>
             </div>
             <div class="content">
                 <section class="panel">
-                    <h2>Workflow</h2>
-                    <ol>
-                        <li>---------------------</li>
-                        <li>---------------------</li>
-                    </ol>
+                    <h2>Basic Control</h2>
+                    <p>
+                        This uses a receiver ESP32 to process and receive the packages comming from the controller and AI
+                        simply maps the wireless inputs to the Arduino and motor drivers, MAde this way to simplify the processes and keep them in blocks.
+                    </p>
                 </section>
                 <section class="panel">
-                    <h2>Objective</h2>
-                    <p>---------------------</p>
+                    <h2>Object Recognition</h2>
+                    <p>
+                        The Raspberri Controls the camera Inputs, Classifiers and Object analysis algorithms using OpenCV and sends directives to the ESP32
+                        These primitive directives are pre-processed but kept as a minimum to ensure speed.
+                    </p>
                 </section>
             </div>
         </article>
