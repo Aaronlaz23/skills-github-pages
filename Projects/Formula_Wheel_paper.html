@@ -12,7 +12,8 @@
     <header class="top-description">
         <h1>What is this Project?</h1>
         <p>
-            ---------------------
+            This paper documents the design of a special steering wheel needed to drive a custom RC Formula 1 Style Car, 
+            since, the necessity arises to give directions and monitor the data in a comfortable fashion.
         </p>
     </header>
 
@@ -21,9 +22,9 @@
 
         <article class="list-item">
             <div class="media">
-                <img src="project_images/Levitator_1.png" alt="Levitator Image">
+                <img src="project_images/Wheel_ON.jpeg" alt="Levitator Image">
                 <div class="overlay">
-                    <h1>Magnetic Levitation Control</h1>
+                    <h1>Wireless RC Control</h1>
                     <p>This is the final result</p>
                 </div>
             </div>
@@ -31,51 +32,86 @@
                 <section class="panel">
                     <h2>Workflow</h2>
                     <ol>
-                        <li>---------------------</li>
-                        <li>---------------------</li>
+                        <li> Firstly I had to think on the partition on the roles since I wanted to ensure each components used all its capabilities.</li>
+                        <li> Then I tested the Wireless and the I2C communication using a level shifter. </li>
+                        <li> Oh Wait, How do I hold everything?, Thats where the housing comes in </li>
+                        <li> I integrated the sensor and the main inputs </li>
+                        <li> Then I limited the inputs treating the signals and saving them in a structure </li>
+                        <li> After getting the signal I simply displayed them on the TFT </li>
+                        <li> Lastly, I tested the entire system under real-world conditions. </li>
                     </ol>
                 </section>
                 <section class="panel">
                     <h2>Objective</h2>
-                    <p>---------------------</p>
+                    <p>There exists no commercially viable solution to drive the custom car, 
+                        therefore the approach is making one that fits with the experience needed. 
+                        The ending wheel should have long range u to 100 meters and have low latency down to the 1ms 
+                        along with different triggers and sensors that read the inputs and show visually on a display, 
+                        as per the charger and battery this will not be included in the result since a commercially available will be used. 
+                        There must be an inclusion of the ergonomic design of the wheel, nevertheless this shall not be a strict measure 
+                        since its not the ghoal of the paper.</p>
                 </section>
             </div>
         </article>
 
 
         <article class="list-item">
-            <div class="media">
-                <img src="project_images/Diagram_Maglev.png" alt="Levitator structure">
+            <div class="media" style="width: 50%">
+                <img src="project_images/Wheel_data_flow.png" style="size: cover;" alt="Levitator structure">
                 <div class="overlay"><h1>Structure</h1></div>
             </div>
             <div class="content">
                 <section class="panel">
                     <h2>Materials</h2>
                     <ul>
-                        <li>---------------------</li>
-                        <li>---------------------</li>
-                        <li>---------------------</li>
+                        <li> ESP32 Microcontroller </li>
+                        <li> Arduino nano </li>
+                        <li> Gravitational sensor </li>
+                        <li> TFT Display </li>
+                        <li> Buttons </li>
+                        <li> Potentiometers </li>
+                        <li> Joysticks </li>
+                        <li> Enclosure </li>
                     </ul>
+                    <p>
+                        The structure of the wheel is based on a 3D printed enclosure that holds the electronics and the sensors, necessary components to make the wheel work.
+                        The main brain of the wheel is an ESP32 microcontroller that handles the wireless communication and the data processing, 
+                        while an Arduino Nano is used for visualization on a TFT display is used to show the data and the status of the wheel, 
+                        while a gravitational sensor is used to read the tilt of the wheel. determining the direction of the car.
+                        Finally the buttons and triggers are used to send commands to the car.
+                    </p>
                 </section>
             </div>
         </article>
 
         <article class="list-item">
             <div class="media">
-                <img src="project_images/Levitation_Formula.png" alt="Physical system">
-                <div class="overlay"><h1>Physical System</h1></div>
+                <img src="project_images/Wheel_signal.png" alt="Physical system">
+                <div class="overlay"><h1>Signal System</h1></div>
             </div>
             <div class="content">
                 <section class="panel">
-                    <h2>---------------------</h2>
-                    <p>---------------------.</p>
+                    <ul>
+                        <li> Tilt sensing </li>
+                        <li> Buttons </li> 
+                        <li> Triggers </li>
+                        <li> Display </li>
+                        <li> I2C Comunication </li>
+                        <li> Ergonomics </li>
+                        <li> ESP-NOW </li>
+                    </ul>
+                    <p>
+                        The signal system is responsible for handling the inputs from the various sensors and actuators, 
+                        processing them, and sending the appropriate commands to the microcontrollers.
+                    </p>
+
                 </section>
             </div>
         </article>
 
         <article class="list-item">
             <div class="media">
-                <img src="project_images/Black_Box_Solution.png" alt="Sensor curve">
+                <img src="project_images/Wheel_Inside_2.jpeg" alt="Sensor curve">
                 <div class="overlay"><h1>Sensor Curve</h1></div>
             </div>
             <div class="content">
@@ -94,12 +130,14 @@
 
     <!-- 3. GALLERY (add as many images as you want) -->
     <section class="gallery">
-        <img src="project_images/Levitator_1.png" alt="">
-        <img src="project_images/Levitator_1.png" alt="">
-        <img src="project_images/Levitator_1.png" alt="">
-        <img src="project_images/Levitator_1.png" alt="">
-        <img src="project_images/Levitator_1.png" alt="">
-        <img src="project_images/Levitator_1.png" alt="">
+        <img src="project_images/Wheel_Front.jpeg" alt="">
+        <img src="project_images/Wheel_Inside_1.jpeg" alt="">
+        <img src="project_images/Wheel_Inside_2.jpeg" alt="">
+        <img src="project_images/Wheel_ON.jpeg" alt="">
+        <img src="project_images/Wheel_Front.jpeg" alt="">
+        <img src="project_images/Wheel_Inside_1.jpeg" alt="">
+        <img src="project_images/Wheel_Inside_2.jpeg" alt="">
+        <img src="project_images/Wheel_ON.jpeg" alt="">
     </section>
 
     <!-- 4. CLOSING NARRATIVE -->
@@ -109,10 +147,15 @@
         <div class="closing-text">
             <h2>Lessons learned</h2>
             <p>
-                --------
+                Throughout this project, I learned how to integrate different electronic components into a complete wireless control system. 
+                I gained experience working with ESP32 and Arduino microcontrollers, ESP-NOW and I²C communication, and processing signals from buttons, triggers, joysticks, and potentiometers. 
+                I also learned how to use the tilt sensor to measure the inclination of the steering wheel and translate it into directional commands for the car. 
+                Another important part was understanding how to manage data between different devices and display it on a TFT screen. 
+                Finally, I gained practical experience in designing a 3D-printed enclosure, integrating the electronics, and testing the system under real-world conditions. 
+                Overall, this project helped me improve my skills in embedded programming, electronics, wireless communication, and hardware integration.
             </p>
             <p>
-                ----------
+                Thanks for reading... If you did.
             </p>
             <a class="download-button" href="Papers/MAGLEV_VER_3.pdf">Download full paper</a>
         </div>
